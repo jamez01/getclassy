@@ -1,0 +1,20 @@
+getclassy is a sinatra application generator.
+
+getclassy will create a skeleton application and roughly configure your models, git, config.ru, bundler, and your sinatra application.
+
+Currently getclassy will setup your application to use either ActiveRecord, or DataMapper, depending on the command line options.
+
+Usage: ./getclassy.rb [options] app_name
+    -c, --no-configru                Do not generate config.ru file
+    -b, --no-bundler                 Do not create Gemfile for bundler
+    -h, --help                       Display this information
+    -g, --include-gem GEM            Require gem in gemfile
+    -o, --orm ORM                    Generate model file for (dm (default), activerecord, none)
+        --[no-]git                   Initialize git repo
+        --views RENDERER             Use erb, or haml for views
+
+
+TODO:
+ Make this an actual gem that can be installed and include a "binary".
+
+
