@@ -82,6 +82,7 @@ end
       File.open("./config.ru","w") do |file|
         file.puts("require 'rubygems'")
         file.puts("require 'sinatra'")
+	file.puts("require './app.rb'")
         file.puts("\n\nrun Application::#{app.capitalize}")
       end if @options[:configru]
       File.open("./views/layout.#{@options[:view]}","w").close
@@ -130,11 +131,11 @@ end
 EOS
           Dir.mkdir('./db'); Dir.mkdir('db/migrate')
           when :dm then
-            gems << 'dm_core'
+            gems << 'dm-core'
             gems << 'dm-mysql-adapter'
             @options[:model] = <<EOS
 require 'rubygems'
-require 'dm_core'
+require 'dm-core'
 require 'dm-mysql-adapter'
 DataMapper::Setup(:default, "mysql://localhost/#{@app}")
 
