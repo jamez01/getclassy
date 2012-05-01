@@ -137,7 +137,7 @@ EOS
 require 'rubygems'
 require 'dm-core'
 require 'dm-mysql-adapter'
-DataMapper::Setup(:default, "mysql://localhost/#{@app}")
+DataMapper.setup(:default, "mysql://localhost/#{@app}")
 
 ## Place your models below.
 EOS

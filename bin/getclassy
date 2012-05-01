@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require './lib/getclassy.rb'
+
+GetClassy.run if $0 == __FILE__
+
